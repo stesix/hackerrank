@@ -5,11 +5,11 @@ var input_stdin = "";
 var input_stdin_array = "";
 var input_currentline = 0;
 
-process.stdin.on('data', function (data) {
+process.stdin.on('data', function(data) {
     input_stdin += data;
 });
 
-process.stdin.on('end', function () {
+process.stdin.on('end', function() {
     input_stdin_array = input_stdin.split("\n");
     main();
 });
@@ -26,13 +26,13 @@ function analyseString(s) {
 
     //console.log(s);
 
-    for (let i = 0; i < 26; i++) {
+    for (let i = 0; i < 26; i++) 
         result[String.fromCharCode(FIRST_VAL + i)] = { "occurrences":  0 };
-    }
+    
 
-    for (let i = 0; i < s.length; i++) {
-        result[s.charAt(i)]["occurrences"]++;
-    }
+    for (let i = 0; i < s.length; i++) 
+        result[s.charAt(i)].occurrences++;
+    
 
     return result;
 }
@@ -50,11 +50,11 @@ function makingAnagrams(s1, s2) {
     let rightChanges = 0;
 
     for (let c in left) {
-        if (left[c].occurrences < right[c].occurrences) {
+        if (left[c].occurrences < right[c].occurrences) 
             leftChanges += right[c].occurrences - left[c].occurrences;
-        } else if (left[c].occurrences > right[c].occurrences) {
+        else if (left[c].occurrences > right[c].occurrences) 
             rightChanges += left[c].occurrences - right[c].occurrences;
-        }
+        
     }
 
     return rightChanges + leftChanges;

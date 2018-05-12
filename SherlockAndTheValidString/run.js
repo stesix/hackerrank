@@ -5,11 +5,11 @@ var input_stdin = "";
 var input_stdin_array = "";
 var input_currentline = 0;
 
-process.stdin.on('data', function (data) {
+process.stdin.on('data', function(data) {
     input_stdin += data;
 });
 
-process.stdin.on('end', function () {
+process.stdin.on('end', function() {
     input_stdin_array = input_stdin.split("\n");
     main();
 });
@@ -63,9 +63,9 @@ function isValid(s){
         return "YES";
 
     //console.log(min, max, amounts[min], amounts[max]);
-    if (max > min + 1 || amounts[max] >= amounts[min]) {
-        return "NO"
-    }
+    if (max > min + 1 || amounts[max] >= amounts[min]) 
+        return "NO";
+    
 
     return "YES";
 }

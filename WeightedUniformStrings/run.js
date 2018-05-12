@@ -41,8 +41,8 @@ function analyseArray(s) {
                 result[s.charAt(i)] = { "occurrences": 1, "value": s.charCodeAt(i) - FIRST_VAL + 1 };
         } else {
             occurrence++;
-            if (occurrence > result[lastChar]["occurrences"])
-                result[lastChar]["occurrences"] = occurrence;
+            if (occurrence > result[lastChar].occurrences)
+                result[lastChar].occurrences = occurrence;
         }
     }
 

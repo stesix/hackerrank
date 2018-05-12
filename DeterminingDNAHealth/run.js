@@ -5,11 +5,11 @@ var input_stdin = "";
 var input_stdin_array = "";
 var input_currentline = 0;
 
-process.stdin.on('data', function (data) {
+process.stdin.on('data', function(data) {
     input_stdin += data;
 });
 
-process.stdin.on('end', function () {
+process.stdin.on('end', function() {
     input_stdin_array = input_stdin.split("\n");
     main();
 });
@@ -60,7 +60,7 @@ function Trie() {
         getRoot: function() {
             return root;
         }
-    }
+    };
 }
 
 function findIndex(genes, first, last, value) {
@@ -96,17 +96,17 @@ function getScore(node, first, last, r) {
     var startIdx = findIndex(node.index, 0, node.index.length - 1, first - 1);
     var endIdx = findIndex(node.index, 0, node.index.length - 1, last);
 
-    if (node.index[endIdx] <= last) {
+    if (node.index[endIdx] <= last) 
         r += node.indexH[endIdx];
-        //console.log('++ getScore <= last r:', node.indexH[endIdx], 'endIdx: ', endIdx);
-    }
+    //console.log('++ getScore <= last r:', node.indexH[endIdx], 'endIdx: ', endIdx);
+    
 
     //
 
-    if (node.index[startIdx] < first) {
+    if (node.index[startIdx] < first) 
         r -= node.indexH[startIdx];
-        //console.log('++ getScore < first indexH:', node.indexH[endIdx], 'startIdx: ', startIdx);
-    }
+    //console.log('++ getScore < first indexH:', node.indexH[endIdx], 'startIdx: ', startIdx);
+    
 
     return r;
 }
@@ -126,7 +126,7 @@ function performMagic(genes, health, first, last, d) {
 
             rating = getScore(node, first, last, rating);
             //console.log('RATING:', rating, "NODE: ", node);
-        } while(node && iter < d.length);
+        } while (node && iter < d.length);
     }
     return rating;
 }
@@ -146,7 +146,7 @@ function main() {
         trie.add(gene, index, health[index]);
     });
 
-    for(var a0 = 0; a0 < s; a0++){
+    for (var a0 = 0; a0 < s; a0++){
         var first_temp = readLine().split(' ');
         var first = parseInt(first_temp[0]);
         var last = parseInt(first_temp[1]);

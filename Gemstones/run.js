@@ -5,11 +5,11 @@ var input_stdin = "";
 var input_stdin_array = "";
 var input_currentline = 0;
 
-process.stdin.on('data', function (data) {
+process.stdin.on('data', function(data) {
     input_stdin += data;
 });
 
-process.stdin.on('end', function () {
+process.stdin.on('end', function() {
     input_stdin_array = input_stdin.split("\n");
     main();
 });
@@ -45,9 +45,9 @@ function gemstones(arr){
 function main() {
     var n = parseInt(readLine());
     var arr = [];
-    for(var arr_i = 0; arr_i < n; arr_i++){
-       arr[arr_i] = readLine();
-    }
+    for (var arr_i = 0; arr_i < n; arr_i++)
+        arr[arr_i] = readLine();
+    
     var result = gemstones(arr);
     process.stdout.write("" + result + "\n");
 
