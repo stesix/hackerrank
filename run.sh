@@ -20,26 +20,23 @@ cd "$1" &> /dev/null
 for testFile in test.* ; do
     extension=$( echo $testFile | cut -d. -f2 )
 
-    echo "* Testing $testFile"
+    echo "** Running test '$testFile' for '$1':"
     if [ -f "result.$extension" ] ; then
         node run.js < $testFile > "result.${extension}.tmp"
         diff -q "result.$extension" "result.${extension}.tmp"
         exit_code=$?
 
         if [ $exit_code -ne 0 ] ; then
-            echo "Error, expected this output:"
+            echo "*** Error, expected this output:"
             cat "result.$extension"
             echo
-            echo "Obtained this output:"
+            echo "*** Obtained this output:"
             cat "result.${extension}.tmp"
         else
-            echo "** Results for $testFile match the expectation."
+            echo "*** Results for $testFile match the expectation."
         fi
         rm -f "result.${extension}.tmp"
     else
         node run.js < $testFile
     fi
 done
-
-
-
