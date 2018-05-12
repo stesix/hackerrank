@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^4.0.2",
+    "gulp-exec": "^3.0.1",
+    "gulp-watch": "^5.0.0"
+  }
+}
