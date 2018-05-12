@@ -1,0 +1,75 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "rules": {
+        "array-bracket-spacing": [ "warn", "always", { "singleValue": false, "objectsInArrays": false } ],
+        "array-callback-return": [ "warn" ],
+        "arrow-spacing": [ "warn" ],
+        "block-scoped-var": [ "error" ],
+        "block-spacing": [ "warn" ],
+        "brace-style": [ "error", "1tbs", { "allowSingleLine": true } ],
+        "camelcase": [ "warn" ],
+        "comma-spacing": [ "error" ],
+        "comma-style": [ "error" ],
+        "complexity": [ "warn" ],
+        "curly": [ "warn", "multi-or-nest", "consistent" ],
+        "default-case": [ "warn" ],
+        "dot-location": [ "warn", "property" ],
+        "dot-notation": [ "warn" ],
+        "eqeqeq": [ "warn" ],
+        "guard-for-in": [ "warn" ],
+        "keyword-spacing": [ "warn", { "before": true, "after": true } ],
+        "indent": [ "error", 4, { "SwitchCase": 1 } ],
+        "linebreak-style": [ "warn", "unix" ],
+        "max-depth": [ "error", 8 ],
+        "max-len": [ "warn", 120, 4, {
+            "ignoreComments": true,
+            "ignoreRegExpLiterals": true,
+            "ignoreTemplateLiterals": true,
+            "ignoreTrailingComments": true,
+            "ignoreUrls": true
+        }],
+        "no-cond-assign": [ "error" ],
+        "no-console": [ "warn" ],
+        "no-constant-condition": [ "error" ],
+        "no-dupe-args": [ "error" ],
+        "no-dupe-keys": [ "error" ],
+        "no-else-return": [ "warn" ],
+        "no-empty-character-class": [ "error" ],
+        "no-empty-function": [ "warn" ],
+        "no-eval": [ "error" ],
+        "no-fallthrough": [ "warn", { "commentPattern": "break[\\s\\w]*omitted" } ],
+        "no-global-assign": [ "error" ],
+        "no-lone-blocks": [ "error" ],
+        "no-loop-func": [ "warn" ],
+        "no-multi-spaces": [ "warn" ],
+        "no-multi-str": [ "warn" ],
+        "no-new-wrappers": [ "warn" ],
+        "no-redeclare": [ "warn" ],
+        "no-return-assign": [ "warn" ],
+        "no-self-assign": [ "error", { "props": true } ],
+        "no-shadow-restricted-names": [ "warn" ],
+        "no-sparse-arrays": [ "error" ],
+        "no-unmodified-loop-condition": [ "warn" ],
+        "no-unreachable": [ "error" ],
+        "no-unused-vars": [ "warn" ],
+        "no-useless-return": [ "warn" ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "semi-spacing": [ "warn" ],
+        "space-before-function-paren": [ "warn", "never" ],
+        "space-unary-ops": [ "error", {
+            "words": true,
+            "nonwords": false,
+            "overrides": {
+                "new": false
+            }
+        }],
+        "use-isnan": [ "error" ],
+        "valid-typeof": [ "error" ],
+        "yoda": [ "warn", "never", { "exceptRange": true, "onlyEquality": true } ]
+    }
+}
