@@ -9,7 +9,6 @@
         "block-scoped-var": [ "error" ],
         "block-spacing": [ "warn" ],
         "brace-style": [ "error", "1tbs", { "allowSingleLine": true } ],
-        "camelcase": [ "warn" ],
         "comma-spacing": [ "error" ],
         "comma-style": [ "error" ],
         "complexity": [ "warn" ],
@@ -31,7 +30,6 @@
             "ignoreUrls": true
         }],
         "no-cond-assign": [ "error" ],
-        "no-console": [ "warn" ],
         "no-constant-condition": [ "error" ],
         "no-dupe-args": [ "error" ],
         "no-dupe-keys": [ "error" ],
